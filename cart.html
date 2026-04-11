@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+ <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #c6ab8f;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.cart {
+  width: 800px;
+  background: #eee;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  margin: 20px 0;
+  font-weight: bold;
+  color: gray;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr auto;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.img {
+  width: 60px;
+  height: 60px;
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-box button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: orange;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.order {
+  background: #2d9cdb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: bold;
+}
+ </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="cart">
+
+    <div class="header">
+      <h2>Shopping Cart</h2>
+      <input type="text" placeholder="Search Product...">
+    </div>
+
+    <div class="table-header">
+      <span>Item</span>
+      <span>Quantity</span>
+      <span>Price</span>
+      <span>Amount</span>
+    </div>
+
+    <div class="cart-body" id="cart-body">
+
+      <!-- Item -->
+      <div class="item">
+        <div class="product">
+          <div class="img"style="background: #ddd;"></div>
+          <div>
+            <h4>Controller</h4>
+            <p>To control your gaming experience</p>
+          </div>
+        </div>
+
+        <div class="qty-box">
+          <button class="minus">-</button>
+          <span class="qty">2</span>
+          <button class="plus">+</button>
+        </div>
+
+        <div class="price">$19.00</div>
+        <div class="amount">$38.00</div>
+
+        <button class="delete">✖</button>
+      </div>
+
+      <!-- Item -->
+      <div class="item">
+        <div class="product">
+          <div class="img"></div>
+          <div>
+            <h4>Omnitrix</h4>
+            <p>A device that allows you to transform into any alien</p>
+          </div>
+        </div>
+
+        <div class="qty-box">
+          <button class="minus">-</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+
+        <div class="price">$8.00</div>
+        <div class="amount">$8.00</div>
+
+        <button class="delete">✖</button>
+      </div>
+       <!-- Item -->
+      <div class="item">
+        <div class="product">
+          <div class="img"></div>
+          <div>
+            <h4>Infinity Stone</h4>
+            <p>A powerful artifact with infinite energy</p>
+          </div>
+        </div>
+
+        <div class="qty-box">
+          <button class="minus">-</button>
+          <span class="qty">2</span>
+          <button class="plus">+</button>
+        </div>
+
+        <div class="price">$19.00</div>
+        <div class="amount">$38.00</div>
+
+        <button class="delete">✖</button>
+      </div>
+
+       <!-- Item -->
+      <div class="item">
+        <div class="product">
+          <div class="img"></div>
+          <div>
+            <h4>Web shooter</h4>
+            <p>A device that allows you to shoot webs</p>
+          </div>
+        </div>
+
+        <div class="qty-box">
+          <button class="minus">-</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+
+        <div class="price">$8.00</div>
+        <div class="amount">$8.00</div>
+
+        <button class="delete">✖</button>
+      </div>
+
+
+    </div>
+
+    <div class="footer">
+      <div class="total">
+        Total: $<span id="total">0</span>
+      </div>
+      <button class="order">Order Now →</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function updateCart() {
+  let total = 0;
+
+  document.querySelectorAll(".item").forEach(item => {
+    let price = parseFloat(item.querySelector(".price").textContent.replace("$",""));
+    let qty = parseInt(item.querySelector(".qty").textContent);
+
+    let amount = price * qty;
+    item.querySelector(".amount").textContent = "$" + amount.toFixed(2);
+
+    total += amount;
+  });
+
+  document.getElementById("total").textContent = total.toFixed(2);
+}
+
+// Quantity buttons
+document.addEventListener("click", function(e) {
+
+  if (e.target.classList.contains("plus")) {
+    let qtyEl = e.target.parentElement.querySelector(".qty");
+    qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
+  }
+
+  if (e.target.classList.contains("minus")) {
+    let qtyEl = e.target.parentElement.querySelector(".qty");
+    let qty = parseInt(qtyEl.textContent);
+    if (qty > 1) qtyEl.textContent = qty - 1;
+  }
+
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.remove();
+  }
+
+  updateCart();
+});
+
+// Initial total
+updateCart();
+</script>
+</body>
+</html>
