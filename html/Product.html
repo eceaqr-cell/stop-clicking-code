@@ -11,33 +11,37 @@
 <body class="bg-gray-100">
 
     <nav class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <!-- Logo -->
-                <div class="flex-shrink-0 text-white text-4xl font-bold hover:text-yellow-300 transition">
-                    <a href="/html/Home.html" class="hover:text-yellow-300 transition font-bold text-2xl">Look at
-                        you</a>
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6 text-white font-medium">
-                    <a href="/html/Home.html" class="hover:text-yellow-300 transition font-bold text-2xl">Home</a>
-                    <a href="/html/Product.html" class="hover:text-yellow-300 transition font-bold text-2xl">Product</a>
-                    <a href="/html/Detail.html" class="hover:text-yellow-300 transition font-bold text-2xl">Detail</a>
-                    <a href="/html/Cart.html" class="hover:text-yellow-300 transition font-bold text-2xl">Cart</a>
-                    <a href="/html/Checkout.html"
-                        class="hover:text-yellow-300 transition font-bold text-2xl">Checkout</a>
-                </div>
-
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
-                        ☰
-                    </button>
-                </div>
-            </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0 text-white text-4xl font-bold hover:text-yellow-300 transition">
+          <a href="/html/Home.html" class="hover:text-yellow-300 transition font-bold text-2xl">Look at you</a>
         </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 text-white font-medium">
+          <a href="/html/Home.html" class="hover:text-yellow-300 transition font-bold text-2xl">Home</a>
+          <a href="/html/Product.html" class="hover:text-yellow-300 transition font-bold text-2xl">Product</a>
+          <a href="/html/Detail.html" class="hover:text-yellow-300 transition font-bold text-2xl">Detail</a>
+          <a href="/html/Cart.html" class="hover:text-yellow-300 transition font-bold text-2xl">Cart</a>
+          <a href="/html/Checkout.html" class="hover:text-yellow-300 transition font-bold text-2xl">Checkout</a>
+        </div>
+
+        <!-- Desktop Button -->
+        <div class="hidden md:block">
+          <a href="/html/Login.html" class="bg-white text-indigo-700 px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold font-bold text-2xl">
+            Log in
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-white font-medium">
@@ -46,7 +50,7 @@
       <a href="/html/Detail.html" class="block hover:text-yellow-300 transition font-bold text-2xl">Detail</a>
       <a href="/html/Cart.html" class="hover:text-yellow-300 transition font-bold text-2xl">Cart</a>
       <a href="/html/Checkout.html" class="block hover:text-yellow-300 transition font-bold text-2xl">Checkout</a>
-      <a href="" class="block bg-white text-indigo-700 text-center px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold mt-2 font-bold text-2xl">
+      <a href="/html/Login.html" class="block bg-white text-indigo-700 text-center px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold mt-2 font-bold text-2xl">
         Log in
       </a>
     </div>
@@ -67,7 +71,7 @@
         </div>
     </form>
 </div>
-  </nav>
+    </nav>
 
     <script>
         const toggle = document.getElementById('menu-toggle');
@@ -79,1940 +83,452 @@
     </script>
 
     <main>
-        <section class="bg-gray-50 min-h-screen py-16 px-6">
-    <h1 class=" text-center font-bold text-4xl mb-4">Oversized T-Shirt</h1>
+        <section id="Projects"
+            class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
 
-            <!-- lind 1 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/56/45/d7/5645d72a36f6e78f2d62e0760a5df886.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sports Jersey T-shirt</h3>
-
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+            <!--   ✅ Product card 1 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/aa/55/e9/aa55e9f6e8cd0ab997c5bacfea8f9575.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">ShadowFlex Tracksuit</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
                         </div>
-                    </div>
-                </div>
+                        <input type="number" class="bg-white-150 w-10 border-1" value="0" min="0">
 
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/1d/1a/2b/1d1a2b4057641bdfaad0447bbda3725b.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sports Jersey T-shirt</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        </div>
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/a6/19/a0/a619a0642f5d1491bc6270773f874c3e.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sports Jersey T-shirt</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
-            </div>
+
+            <!--  ✅ Product card 2 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/ff/06/b8/ff06b8e8cca600171a470bb415cf53a2.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Urban Storm Set</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
             </div>
 
-            <!-- lind 2 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/91/08/57/9108573bdf5624e975bcca5899665f91.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sports Jersey T-shirt</h3>
+            <!--   ✅ Product card 3 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/d9/ab/03/d9ab03ac8e695e36922d9f4746a63a89.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Night Runner Outfit</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
 
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/44/86/71/448671bd29b694268ef8e4b2bb954ff4.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Printed T-shirt</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
+
+            <!--   ✅ Product card 4 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/3b/33/28/3b3328e3210d3314caa3288eab3d1b43.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">FrostEdge Hoodie Set</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
                         </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/67/ba/cd/67bacd98cc98a74f13411365cafc21fc.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sports Jersey T-shirt</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
-            </div>
+
+            <!--  ✅ Product card 5 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/32/e4/19/32e419a945824f872e7394fbfb6c76a8.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Street Pulse Combo</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
             </div>
 
-            <!-- lind 3 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/d8/64/77/d86477d7060892bb87b4a51f922469ec.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Streetwear T-shirt</h3>
+            <!--  ✅ Product card 6 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/1e/8a/14/1e8a14bee907910e1c3c05bcd4ab9991.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Phantom Wear Set</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
 
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$20.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/ca/f8/aa/caf8aaaccc89b5f7c5334756a68e08fa.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Streetwear T-shirt</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
+
+            <!--  ✅ Product card 7 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/2b/6b/bb/2b6bbbf70f2eaf7cb393ac5efd3275a1.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Ice Drift Tracksuit</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
                         </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$20.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/3c/c2/3e/3cc23e3c2fac2c57faec113cf0cf1e2e.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Streetwear T-shirt</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
-            </div>
+
+            <!--   ✅ Product card 8 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/9b/5a/26/9b5a26b77c6a0c1c0b25d06ea69294b3.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Alpha Street Set</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$20.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
             </div>
 
-            <!-- lind 4 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/65/f3/6b/65f36b46fbb2982c1ef29d6a423f2336.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Graphic T-shirt</h3>
+            <!--   ✅ Product card 9 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/34/82/04/34820487a24ca90401a8dad95f77128d.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Neon Strike Outfit</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
 
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/de/45/81/de45811553f3647e5e5793461862505f.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Graphic T-shirt</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
+
+            <!--  ✅ Product card 10 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/08/74/df/0874df2231e111b12b0c875d35b27492.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Ghost Mode Tracksuit</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
                         </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/72/9e/7f/729e7fb134fd8abbf21763697baaba0a.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Graphic T-shirt</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
-            </div>
+
+            <!--  ✅ Product card 11 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/97/98/31/9798310b2424f41e22c784f818b058da.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Titan Flex Set</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
             </div>
 
-            <!-- lind 5 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/05/bb/a2/05bba2dbf0a8664ff904768009364ffa.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Graphic T-shirt</h3>
+            <!--  ✅ Product card 12 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/96/58/91/965891d7c49531f301b3724710e31fa7.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Blaze Runner Combo</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
 
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/21/75/3c/21753c39f0201dc66538360305a31787.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Graphic T-shirt</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
+
+            <!--   ✅ Product card 13 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/1b/41/a9/1b41a926c29fd2f872ba3e273453b643.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Dark Vibe Outfit</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
                         </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/fb/98/c8/fb98c852ff5befa903ab137718554c54.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Graphic T-shirt</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
-            </div>
+
+            <!--   ✅ Product card 14 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/7c/0e/85/7c0e8570d9fa926e5d238a94555a76d3.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Skyline Hoodie Set</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
             </div>
 
-            <!-- lind 6 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/6a/b7/2b/6ab72bd3b8e3e1a3b90a950351b9ee52.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Graphic T-shirt</h3>
+            <!--  ✅ Product card 15 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/02/b4/ed/02b4eda05691313ff19fc480d9f2e013.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Thunder Fit Tracksuit</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
 
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/b1/63/84/b163846513c1fcf1c98444a2ced95799.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Graphic T-shirt</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
+
+            <!--  ✅ Product card 16 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/be/ce/fb/becefb8180877ed96156cbb38f13636f.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Urban Legend Set</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
                         </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/49/a5/43/49a5439f83897a6ed9e194f1ddf64902.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Graphic T-shirt</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
-            </div>
+
+            <!--  ✅ Product card 17 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/d3/6f/2d/d36f2d661ebcd6218373f10c34b3a14d.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Drift King Outfit</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$15.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
             </div>
 
-<div class="text-center p-10">
-    <h1 class="font-bold text-4xl mb-4">Outfit Or Set Of Clothes</h1>
-</div>
+            <!--  ✅ Product card 18 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/0e/a2/66/0ea2663e3496bb7fd4b612dba1974481.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Street Armor Combo</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
 
-            <!-- lind 1 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/ad/2a/9f/ad2a9fee0f316f7ee4e1fed6bf27063f.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">White short-sleeve</h3>
-
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$18.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/5c/3a/88/5c3a882778122627232e34467193303e.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Solid blue short-sleeve</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
+
+            <!--  ✅ Product card 19 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/f7/7b/7d/f77b7d54c5a20d6742a3cf3a12824896.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Frost Shadow Set</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
                         </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$18.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/46/72/0b/46720bb85fafd83869e755893b6e778b.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Black and white"Solit"</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
             </div>
-            </div>
+
+            <!--  ✅ Product card 20 -->
+            <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.pinimg.com/736x/a0/2f/c6/a02fc6fa520c3f88daf02a59843f4bca.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <div class="px-4 py-3 w-72">
+                        <p class="text-lg font-bold text-black truncate block capitalize">Rebel Motion Tracksuit</p>
+                        <!-- MULTI SIZE -->
+                        <div class="sizes">
+                            <label><input type="checkbox" value="XS"> <span>XS</span></label>
+                            <label><input type="checkbox" value="S"> <span>S</span></label>
+                            <label><input type="checkbox" value="M"> <span>M</span></label>
+                            <label><input type="checkbox" value="L"> <span>L</span></label>
+                            <label><input type="checkbox" value="XL"> <span>XL</span></label>
+                        </div>
+                        <input type="number" class="bg-white-150 w-10 border -1" value="0" min="0">
+
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$18.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
+                            <span class="text-lg font-semibold text-red-500">$15.00</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-800">Buy</button>
                         </div>
                     </div>
-                </div>
             </div>
 
-            <!-- lind 2 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/7d/f5/b6/7df5b6effbbcc16b4a32d5ff89d41fea.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Cargo pants</h3>
-
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$20.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/b6/92/66/b692668f8b4041a9e5f30797757027fb.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Cargo pants</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$20.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/0b/51/67/0b51678e9e2b6870787cf1c51c41b1c9.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Cargo pants</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$20.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- lind 3 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/a8/91/55/a891552d85d2f9992e49fdbed7456815.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Oversized</h3>
-
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$30.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/a2/91/c3/a291c3acbfcfb23df663eb3fe53844a2.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Plaid shirt</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$30.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/19/17/d5/1917d5a85c484daef1568c7f381ee994.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Brooklyn</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- lind 4 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/36/58/b1/3658b1fcc278358051f327945fb2787c.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">White graphic tee </h3>
-
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$30.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/21/42/c1/2142c178cac8ab9d87d7ee1b86c596c6.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Gradient</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$30.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/e3/88/39/e38839fb6271b7be291a500563fcdb72.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Teal/Green gradient T-shirt</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$30.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-<div class="text-center p-10">
-    <h1 class="font-bold text-4xl mb-4">Jacket</h1>
-</div>
-
-            <!-- lind 1 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/d0/40/62/d040626a264685d430abfe40acedbff1.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Varsity Jacket</h3>
-
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/fe/26/f6/fe26f6e9dae275557c48c067c6a5e0e5.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Denim Vest Jacket</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/fe/e6/33/fee633f8743907383657af625bfcd55d.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Denim Jacket</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- lind 2 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/1200x/5a/9c/14/5a9c1426fd346cae6419a0695855ed5f.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Patches Jacket</h3>
-
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/08/e4/33/08e4331397736f486519199388c7c538.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Puffer Jacket</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/ec/3d/7a/ec3d7a30e29e7f2034dccbf46dff6524.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Varsity Jacket</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- lind 3 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-sans p-3 md:p-3 lg:p-5 selection:bg-rose-25 selection:text-rose-600">
-                <!-- 1-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/52/d0/73/52d073aa2ec6b9c99162291bee898b59.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Camouflage Jacket</h3>
-
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2-->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/55/d9/c6/55d9c6818916cfd37c6d069561c754ab.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Comic/Manga print Jacket</h3>
-                        <div class="text-sm text-gray-500 mb-2">
-<!-- size -->
-            <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-                        </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://i.pinimg.com/736x/d1/56/21/d15621143b88a3ebad0953620cbdba19.jpg"
-                            alt="Product Image"
-                            class="w-full h-100 object-cover group-hover:scale-105 transition-transform h-100 w-100 object-cover rounded-t-xl" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">varsity Jacket</h3>
-
-<!-- size -->
-            <div class="text-sm text-gray-500 mb-2">
-                <div class="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div class="flex space-x-2">
-
-                    <label class="text-center">
-
-                        <input type="radio"
-                            class="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600"
-                            name="size" value="xs">XS
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="s">S
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="m">M
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="l">L
-                    </label>
-                    <label class="text-center">
-                        <input type="radio" class="flex items-center justify-center w-6 h-6 accent-violet-600" name="size"
-                            value="xl">XL
-                    </label>
-                </div>
-            </div>
-            </div>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-semibold text-green-600">$25.00</span>
-                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-<!-- Testimonials -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">
-          What Our Customers Say
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Testimonial 1 -->
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <div class="flex text-amber-400 mb-4">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </div>
-            <p class="text-gray-700 mb-6">
-              "The quality of the clothes is exceptional. I've ordered multiple
-              times and have never been disappointed. The customer service is
-              also top-notch!"
-            </p>
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 rounded-full overflow-hidden mr-4 "><img src="https://moderncat.com/wp-content/uploads/2015/03/bigstock-405819263_-Lena42r-1440x980.jpg" alt="" class="w-full h-full object-cover">
-                <i class="ri-user-3-line text-xl"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-900">Mr.Van</h4>
-                <p class="text-sm text-gray-500"></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <div class="flex text-amber-400 mb-4">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-half-fill"></i>
-            </div>
-            <p class="text-gray-700 mb-6">
-              "Fast shipping and the products look exactly like the pictures.
-              The sizing guide was very helpful. Will definitely shop here
-              again!"
-            </p>
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 rounded-full overflow-hidden mr-4 "><img src="https://i.pinimg.com/1200x/3b/ec/1b/3bec1bff58f5e5bd30e1dff7ed68bf11.jpg" alt="" class="w-full h-full object-cover">
-                <i class="ri-user-3-line text-xl"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-900">Mr Dara</h4>
-                <p class="text-sm text-gray-500"></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <div class="flex text-amber-400 mb-4">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </div>
-            <p class="text-gray-700 mb-6">
-              "I love the sustainable approach this brand takes. The packaging
-              is eco-friendly and the clothes are made from high-quality,
-              sustainable materials."
-            </p>
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 rounded-full overflow-hidden mr-4 "><img src="https://i.pinimg.com/1200x/7b/ae/7d/7bae7d85f91b70ca18bdf0cd07f16ad7.jpg" alt="" class="w-full h-full object-cover">
-                <i class="ri-user-3-line text-xl"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-900">Mr.Ban</h4>
-                <p class="text-sm text-gray-500"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+        </section>
     </main>
+
     <footer class="absolute-right bottom-0 w-full text-white py-8 bg-gradient-to-t from-green-600 to-indigo-6000">
 
         <div class="container mx-auto flex flex-wrap justify-between">
