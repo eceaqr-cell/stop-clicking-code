@@ -5,6 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Responsive Tailwind Navbar</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; color: #1a1a1a; background: #f7f8f5; }
+    a { text-decoration: none; color: inherit; }
+
+   
+    /* ── SEARCH HERO ── */
+    .search-hero { background: linear-gradient(180deg, #3b82f6 0%, #93c5fd 60%, #dbeafe 100%); padding: 36px 16px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+    .search-hero h1 { color: #fff; font-size: 2.6rem; font-weight: 800; letter-spacing: -.5px; }
+    .search-wrap { position: relative; width: 100%; max-width: 480px; }
+    .search-wrap input { width: 100%; height: 48px; border: none; border-radius: 999px; padding: 0 48px 0 20px; font-size: .95rem; box-shadow: 0 2px 8px rgba(0,0,0,.1); outline: none; }
+    .search-wrap button { position: absolute; right: 0; top: 0; height: 48px; width: 48px; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    .search-wrap button svg { fill: #9ca3af; }
+
+    /* ── PRODUCT LAYOUT ── */
+    .product-section { max-width: 1260px; margin: 10px auto; padding: 0 16px; }
+    .product-card { background: #fff; border-radius: 16px; display: flex; gap: 0; overflow: hidden; }
+
+    /* Thumbnails */
+    .thumb-col { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 28px 16px; border-right: 1px solid #f0f0f0; flex-shrink: 0; }
+    .thumb-arrow { color: #bbb; font-size: 1rem; cursor: pointer; padding: 4px 8px; border-radius: 6px; background: #f9f9f9; border: 1px solid #eee; transition: background .12s; user-select: none; }
+    .thumb-arrow:hover { background: #e5e7eb; }
+    .thumb-col img { width: 72px; height: 80px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: border-color .15s, box-shadow .15s; }
+    .thumb-col img:hover, .thumb-col img.active { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79,70,229,.12); }
+
+    /* Main image */
+    .main-img-wrap { padding: 28px 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .main-img-wrap img { width: 320px; height: 380px; object-fit: cover; border-radius: 12px; border: 1px solid #f0f0f0; transition: opacity .2s; }
+    /* Info */
+    .product-info { padding: 28px 28px; flex: 1; min-width: 0; }
+    .title-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+    .title-row h1 { font-size: 1.65rem; font-weight: 700; color: #111; }
+    .in-stock { background: #dcfce7; color: #166534; font-size: .75rem; font-weight: 600; padding: 4px 10px; border-radius: 6px; white-space: nowrap; }
+    .stars { display: flex; gap: 2px; }
+    .stars svg { width: 14px; height: 14px; fill: #f97316; }
+    .review-meta { font-size: 1.125rem; color: #6b7280; margin-top: 5px; display: flex; align-items: center; gap: 8px; }
+    .price-row { display: flex; align-items: center; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+    .old-price { color: #b0b0b0; text-decoration: line-through; font-size: 1rem; }
+    .new-price { color: #16a34a; font-size: 1.4rem; font-weight: 700; }
+    .discount-badge { background: #fef2f2; color: #dc2626; font-size: .75rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+    .divider { border: none; border-top: 1px solid #f0f0f0; margin: 16px 0; }
+    .brand-share-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .share-icons { display: flex; gap: 8px; align-items: center; }
+    .share-icon { width: 36px; height: 36px; border-radius: 50%; background: #f3f4f6; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .15s; }
+    .share-icon:hover { background: #e5e7eb; }
+    .share-icon svg { width: 16px; height: 16px; }
+    .fb-icon { background: #dcfce7; }
+    .fb-icon svg { fill: #166534; }
+    .desc { font-size: 1.125rem; color: #6b7280; line-height: 1.75; margin-top: 14px; }
+    .cart-row { display: flex; align-items: center; gap: 12px; padding: 18px 0; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; margin-top: 16px; flex-wrap: wrap; }
+    .qty-ctrl { display: flex; align-items: center; gap: 6px; border: 1.5px solid #e5e7eb; border-radius: 999px; padding: 6px 14px; background: #fff; }
+    .qty-btn { background: none; border: none; cursor: pointer; font-size: 1.15rem; color: #444; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background .12s; line-height: 1; }
+    .qty-btn:hover { background: #f3f4f6; }
+    .qty-input { width: 36px; text-align: center; border: none; font-size: .95rem; font-weight: 500; outline: none; background: transparent; }
+    .add-cart-btn { height: 48px; padding: 0 28px; background: #16a34a; color: #fff; border: none; border-radius: 999px; font-size: .95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: background .15s; white-space: nowrap; }
+    .add-cart-btn:hover { background: #15803d; }
+    .add-cart-btn svg { width: 16px; height: 16px; stroke: #fff; fill: none; flex-shrink: 0; }
+    .wishlist-btn { width: 48px; height: 48px; border-radius: 50%; background: #dcfce7; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .15s; }
+    .wishlist-btn:hover { background: #bbf7d0; }
+    .wishlist-btn svg { width: 20px; height: 20px; }
+    .tags-row { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; font-size: 1.125rem; }
+    .tags-row .lbl { color: #1a1a1a; font-weight: 600; margin-right: 4px; }
+    .tags-row .val { color: #6b7280; }
+    .tags-row .link { color: #4f46e5; text-decoration: underline; cursor: pointer; }
+
+
+    @media (max-width: 1024px) {
+      .product-card { flex-direction: column; }
+      .thumb-col { flex-direction: row; border-right: none; border-bottom: 1px solid #f0f0f0; padding: 16px; overflow-x: auto; }
+      .main-img-wrap img { width: 100%; max-width: 400px; height: 280px; }
+      .footer-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .brand-share-row { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body class="bg-gray-100">
     <nav class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
@@ -78,9 +155,108 @@
       mobileMenu.classList.toggle('hidden');
     });
   </script>
-  <main>
-    
-  </main>
+
+  <main class="product-section">
+  <!-- T-shirt -->
+  <div class="product-card">
+
+    <!-- Thumbnails -->
+    <div class="thumb-col">
+      <span class="thumb-arrow" id="thumbUp">▲</span>
+      <img class="active" src="https://i.pinimg.com/736x/56/45/d7/5645d72a36f6e78f2d62e0760a5df886.jpg" alt="View 1">
+      <img src="https://i.pinimg.com/736x/1d/1a/2b/1d1a2b4057641bdfaad0447bbda3725b.jpg" alt="View 2">
+      <img src="https://i.pinimg.com/1200x/44/86/71/448671bd29b694268ef8e4b2bb954ff4.jpg" alt="View 3">
+      <img src="https://i.pinimg.com/736x/91/08/57/9108573bdf5624e975bcca5899665f91.jpg" alt="View 4">
+      <span class="thumb-arrow" id="thumbDown">▼</span>
+    </div>
+
+    <!-- Main image -->
+    <div class="main-img-wrap">
+      <img id="mainImg" src="https://i.pinimg.com/736x/1d/1a/2b/1d1a2b4057641bdfaad0447bbda3725b.jpg" alt="">
+    </div>
+
+    <!-- Info panel -->
+    <div class="product-info">
+      <div class="title-row">
+        <h1>T-Shirt</h1>
+        <span class="in-stock">In Stock</span>
+      </div>
+
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-meta">4 Reviews &nbsp;·&nbsp; <strong>SKU:</strong>&nbsp;2,51,594</p>
+
+      <div class="price-row">
+        <span class="old-price">$48.00</span>
+        <span class="new-price">$17.28</span>
+        <span class="discount-badge">64% Off</span>
+      </div>
+
+      <hr class="divider">
+      <div class="brand-share-row">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:1.125rem;color:#555;">Brand:</span>
+          <span style="font-weight:700;color:#16a34a;font-size:1.125rem;">OrganicFarm™</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:1.125rem;color:#555;">Share:</span>
+          <div class="share-icons">
+            <!-- Facebook -->
+            <div class="share-icon fb-icon">
+              <svg viewBox="0 0 18 18"><path d="M11.998 2.989H13.641V.127C13.358.088 12.383 0 11.247 0 8.878 0 7.255 1.49 7.255 4.229V6.75H4.641V9.95H7.255V18H10.461V9.95H12.97l.397-3.2H10.46V4.547C10.461 3.622 10.71 2.989 11.998 2.989z"/></svg>
+            </div>
+            <!-- Twitter/X -->
+            <div class="share-icon">
+              <svg viewBox="0 0 18 18" fill="#555"><path d="M18 3.419c-.67.293-1.383.491-2.127.581.764-.457 1.348-1.181 1.623-2.044-.717.425-1.5.729-2.343.895C14.48 2.134 13.515 1.688 12.462 1.688c-2.043 0-3.688 1.658-3.688 3.691 0 .293.034.574.094.841C5.79 6.07 3.077 4.6 1.253 2.36.935 2.913.748 3.545.748 4.225c0 1.278.658 2.411 1.639 3.067-.587-.011-1.168-.183-1.661-.458v.014c0 1.793 1.279 3.282 2.957 3.625-.309.082-.635.122-.974.122-.236 0-.467-.013-.69-.063.487 1.461 1.844 2.536 3.457 2.57C4.203 14.115 2.609 14.707.883 14.707c-.297 0-.589-.013-.879-.05 1.635 1.054 3.572 1.656 5.661 1.656 6.79 0 10.503-5.625 10.503-10.5 0-.167-.006-.325-.014-.481.733-.52 1.348-1.169 1.846-1.912z"/></svg>
+            </div>
+            <!-- Pinterest -->
+            <div class="share-icon">
+              <svg viewBox="0 0 18 18" fill="#555"><path d="M9.244 0C4.311 0 1.688 3.161 1.688 6.609c0 1.598.893 3.592 2.323 4.224.217.099.335.057.384-.144.043-.153.23-.894.321-1.241.028-.112.014-.208-.071-.312-.475-.55-.852-1.55-.852-2.489 0-2.404 1.911-4.738 5.164-4.738 2.812 0 4.78 1.827 4.78 4.441 0 2.953-1.562 4.996-3.593 4.996-1.124 0-1.96-.882-1.695-1.973.322-1.299.951-2.697.951-3.634 0-.84-.475-1.535-1.444-1.535-1.144 0-2.073 1.133-2.073 2.654 0 .966.342 1.619.342 1.619s-1.131 4.573-1.342 5.426c-.355 1.446.049 3.787.084 3.988.021.111.145.146.216.055.111-.154 1.469-1.95 1.852-3.361.18-.714.755-2.801.755-2.801.373.681 1.462 1.261 2.62 1.261 3.448 0 5.938-3.03 5.938-6.789C16.3 2.697 13.215 0 9.244 0z"/></svg>
+            </div>
+            <!-- Instagram -->
+            <div class="share-icon">
+              <svg viewBox="0 0 18 18" fill="#555"><path d="M9.03 0C6.589 0 6.283.011 5.323.053c-.956.04-1.613.175-2.183.371-.594.229-1.098.535-1.602.99-.515.495-.87 1.036-1.095 1.633C.222 3.568.088 4.122.048 5.079.01 6.042 0 6.348 0 8.001c0 1.653.01 1.959.048 2.922.04.957.174 1.511.372 2.07.205.527.48.972.923 1.417.445.445.89.718 1.416.923.51.198 1.09.332 1.942.372.96.038 1.265.047 3.709.047s2.749-.009 3.709-.047c.852-.04 1.434-.174 1.943-.372a3.9 3.9 0 001.417-.923 3.9 3.9 0 00.923-1.417c.197-.559.332-1.113.371-2.07.039-.963.048-1.269.048-2.922s-.009-1.959-.048-2.922c-.039-.957-.174-1.511-.371-2.07a3.9 3.9 0 00-.923-1.416A3.9 3.9 0 0013.182.424C12.672.226 12.09.091 11.239.052 10.279.01 9.974 0 7.53 0H9.03zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.038.843.047 1.096.047 3.231s-.009 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 01-.599.919c-.28.28-.546.453-.92.598-.281.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 01-.92-.598 2.5 2.5 0 01-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 100 1.92.96.96 0 000-1.92zm-4.27 1.122a4.109 4.109 0 100 8.217 4.109 4.109 0 000-8.217zm0 1.441a2.667 2.667 0 110 5.334 2.667 2.667 0 010-5.334z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="desc">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.</p>
+
+      <!-- Add to cart -->
+      <div class="cart-row">
+        <div class="qty-ctrl">
+          <button class="qty-btn" type="button" onclick="changeQty(-1)">−</button>
+          <input class="qty-input" id="qty" type="text" value="5" readonly>
+          <button class="qty-btn" type="button" onclick="changeQty(1)">+</button>
+        </div>
+        <button class="add-cart-btn" type="button">
+          <svg stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 17 18">
+            <path d="M5.167 7.333H2.667L1 16.5H16l-1.667-9.167h-2.5M5.167 7.333V4.833C5.167 2.992 6.659 1.5 8.5 1.5s3.333 1.492 3.333 3.333v2.5M5.167 7.333H11.833M5.167 7.333V9.833M11.833 7.333V9.833" stroke="white" fill="none"/>
+          </svg>
+          Add to Cart
+        </button>
+        <button class="wishlist-btn" type="button" title="Add to wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.5">
+            <path d="M12 21C12 21 3 14 3 8a5 5 0 0110 0 5 5 0 0110 0c0 6-9 13-9 13z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Tags -->
+      <div class="tags-row">
+        <div><span class="lbl">Category:</span><span class="val">Shirt</span></div>
+        <div><span class="lbl">Tags:</span><span class="val">Vegetables, Healthy, </span><span class="link">Chinese</span><span class="val">, Cabbage, Green Cabbage</span></div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
 
     <footer class="absolute-right bottom-0 w-full text-white py-8 bg-gradient-to-t from-green-600 to-indigo-6000">
 
