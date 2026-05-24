@@ -161,7 +161,7 @@
     /* slide dots transition already handled by Alpine/Tailwind */
   </style>
 </head>
-<body class="bg-white">
+<body class="bg-gray-100">
      <!-- ════════════════════ NAVBAR ════════════════════ -->
     <nav class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,40 +443,5 @@ updateCart();
 
     </div>
   </footer>
-
-<!-- ════════════════════ SCRIPTS ════════════════════ -->
-<script>
-  /* ── Mobile menu ── */
-  document.getElementById('menu-toggle').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-
-  /* ── Dark mode ── */
-  const html  = document.documentElement;
-  const label = document.getElementById('toggle-label');
-  const btnD  = document.getElementById('dark-toggle');
-  const btnM  = document.getElementById('dark-toggle-mobile');
-
-  if (localStorage.getItem('theme') === 'dark') {
-    html.classList.replace('light', 'dark');
-  }
-
-  function syncUI() {
-    const dark = html.classList.contains('dark');
-    if (label) label.textContent = dark ? 'Light' : 'Dark';
-    if (btnM)  btnM.textContent  = dark ? '☀️' : '🌙';
-  }
-  syncUI();
-
-  function toggleDark() {
-    const dark = html.classList.toggle('dark');
-    html.classList.toggle('light', !dark);
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-    syncUI();
-  }
-
-  btnD.addEventListener('click', toggleDark);
-  btnM.addEventListener('click', toggleDark);
-</script>
 </body>
 </html>
