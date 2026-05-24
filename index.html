@@ -7,6 +7,21 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { darkMode: 'class' }</script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+  function swipeCards() {
+    return {
+      cards: [
+        { id:1, image:'./Img/id1.png', title:'Urban Wave',   description:'', price:50, link:'https://lqrs.com' },
+        { id:2, image:'./Img/id2.png', title:'Nova Style',    description:'', price:50, link:'https://lqrs.com' },
+        { id:3, image:'./Img/id3.png',title:'Black Avenue',  description:'', price:50, link:'https://lqrs.com' },
+        { id:4, image:'./Img/id4.png', title:'MoonWear',     description:'', price:50, link:'https://lqrs.com' },
+        { id:5, image:'./Img/id6.png', title:'Street Mode',  description:'', price:50, link:'https://lqrs.com' },
+        { id:6, image:'./Img/ច-removebg-preview.png',                                title:'Velvet Fit',   description:'', price:50, link:'https://lqrs.com' },
+        { id:7, image:'./Img/id7.png', title:'Neo Fashion',  description:'', price:50, link:'https://lqrs.com' }
+      ]
+    };
+  }
+</script>
   <style>
     *, *::before, *::after {
       transition: background-color .25s, border-color .2s, color .15s, box-shadow .2s;
@@ -512,57 +527,6 @@
 
     </div>
   </footer>
-
-<!-- ════════════════════ SCRIPTS ════════════════════ -->
-<script>
-  /* ── Mobile menu ── */
-  document.getElementById('menu-toggle').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-
-  /* ── Dark mode ── */
-  const html  = document.documentElement;
-  const label = document.getElementById('toggle-label');
-  const btnD  = document.getElementById('dark-toggle');
-  const btnM  = document.getElementById('dark-toggle-mobile');
-
-  if (localStorage.getItem('theme') === 'dark') {
-    html.classList.replace('light', 'dark');
-  }
-
-  function syncUI() {
-    const dark = html.classList.contains('dark');
-    if (label) label.textContent = dark ? 'Light' : 'Dark';
-    if (btnM)  btnM.textContent  = dark ? '☀️' : '🌙';
-  }
-  syncUI();
-
-  function toggleDark() {
-    const dark = html.classList.toggle('dark');
-    html.classList.toggle('light', !dark);
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-    syncUI();
-  }
-
-  btnD.addEventListener('click', toggleDark);
-  btnM.addEventListener('click', toggleDark);
-</script>
-
-<script>
-  function swipeCards() {
-    return {
-      cards: [
-        { id:1, image:'./Img/id1.png', title:'Urban Wave',   description:'', price:50, link:'https://lqrs.com' },
-        { id:2, image:'./Img/id2.png', title:'Nova Style',    description:'', price:50, link:'https://lqrs.com' },
-        { id:3, image:'./Img/id3.png',title:'Black Avenue',  description:'', price:50, link:'https://lqrs.com' },
-        { id:4, image:'./Img/id4.png', title:'MoonWear',     description:'', price:50, link:'https://lqrs.com' },
-        { id:5, image:'./Img/id6.png', title:'Street Mode',  description:'', price:50, link:'https://lqrs.com' },
-        { id:6, image:'./Img/ច-removebg-preview.png',                                title:'Velvet Fit',   description:'', price:50, link:'https://lqrs.com' },
-        { id:7, image:'./Img/id7.png', title:'Neo Fashion',  description:'', price:50, link:'https://lqrs.com' }
-      ]
-    };
-  }
-</script>
 
 </body>
 </html>
