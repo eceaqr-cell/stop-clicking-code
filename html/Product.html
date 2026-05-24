@@ -55,90 +55,70 @@
 </head>
 <body class="bg-gray-100 dark:bg-slate-900 min-h-screen">
      <!-- ════════════════════ NAVBAR ════════════════════ -->
-<nav class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16 items-center">
+    <nav class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0 text-white text-4xl font-bold hover:text-yellow-300 transition">
+          <a href="#" class="hover:text-yellow-300 transition font-bold text-2xl">LOOK AT ME</a>
+        </div>
 
-      <!-- Logo -->
-      <h1 class="flex-shrink-0 text-3xl font-extrabold tracking-wider">
-        <a href="#" class="bg-gradient-to-r from-pink-200 via-fuchsia-400 to-cyan-300
-           bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,105,255,0.8)]
-           transition-all duration-300 hover:scale-110 inline-block">LOOK AT ME</a>
-      </h1>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 text-white font-medium">
+          <a href="../index.html" class="hover:text-yellow-300 transition font-bold text-2xl">Home</a>
+          <a href="./html/Product.html" class="hover:text-yellow-300 transition font-bold text-2xl">Product</a>
+          <a href="./html/Detail.html" class="hover:text-yellow-300 transition font-bold text-2xl">Detail</a>
+          <a href="./html/Cart.html" class="hover:text-yellow-300 transition font-bold text-2xl">Cart</a>
+          <a href="./html/Checkout.html" class="hover:text-yellow-300 transition font-bold text-2xl">Check Out</a>
+          <a href="./html/Abuot.html" class="block hover:text-yellow-300 transition font-bold text-2xl">Abuot Us</a>
+        </div>
 
-      <!-- Desktop links -->
-      <div class="hidden md:flex space-x-6 font-medium">
-        <a href="../index.html"         class="nav-link">Home</a>
-        <a href="./Product.html"  class="nav-link">Product</a>
-        <a href="./Detail.html"   class="nav-link">Detail</a>
-        <a href="./Cart.html"     class="nav-link">Cart</a>
-        <a href="./Checkout.html" class="nav-link">Checkout</a>
-      </div>
+        <!-- Desktop Button -->
+        <div class="hidden md:block">
+          <a href="./html/Login.html" class="bg-white text-indigo-700 px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold font-bold text-2xl">
+            Log in
+          </a>
+        </div>
 
-      <!-- Desktop: dark toggle + login -->
-      <div class="hidden md:flex items-center gap-3">
-        <button id="dark-toggle" title="Toggle dark mode">
-          <span class="icon-moon">🌙</span>
-          <span class="icon-sun">☀️</span>
-          <span id="toggle-label">Dark</span>
-        </button>
-        <a href="./Login.html"
-           class="bg-gradient-to-r from-pink-200 via-fuchsia-400 to-cyan-300
-                  text-white px-4 py-2 rounded-xl shadow-[0_0_15px_rgba(255,105,255,0.7)]
-                  transition-all duration-300 hover:scale-110 font-bold text-2xl inline-block">
-          Log in
-        </a>
-      </div>
-
-      <!-- Mobile: dark toggle + hamburger -->
-      <div class="md:hidden flex items-center gap-2">
-        <button id="dark-toggle-mobile" class="text-white text-xl focus:outline-none" title="Toggle dark mode">🌙</button>
-        <button id="menu-toggle" class="text-white focus:outline-none text-2xl">☰</button>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
+            ☰
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-white font-medium">
-    <a href="../index.html"            class="block hover:text-yellow-300 font-bold text-2xl">Home</a>
-    <a href="./html/Product.html"  class="block hover:text-yellow-300 font-bold text-2xl">Product</a>
-    <a href="./html/Detail.html"   class="block hover:text-yellow-300 font-bold text-2xl">Detail</a>
-    <a href="./html/Cart.html"     class="block hover:text-yellow-300 font-bold text-2xl">Cart</a>
-    <a href="./html/Checkout.html" class="block hover:text-yellow-300 font-bold text-2xl">Checkout</a>
-    <a href="./Login.html"
-       class="block bg-white text-indigo-700 text-center px-4 py-2 rounded-xl
-              hover:bg-yellow-300 font-bold text-2xl mt-2">Log in</a>
-  </div>
-
-  <!-- Hero search bar -->
-  <div class="flex flex-col w-full items-center pt-4 gap-4 pb-6
-              bg-gradient-to-b from-blue-600 via-blue-300 to-blue-100
-              dark:from-blue-900 dark:via-slate-800 dark:to-slate-900">
-    <p class="text-4xl md:text-6xl font-extrabold
-       bg-gradient-to-r from-pink-200 via-fuchsia-400 to-cyan-300
-       bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,105,255,0.8)]
-       transition-all duration-300 hover:scale-110 inline-block">LOOK AT ME</p>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-white font-medium">
+      <a href="../index.html" class="block hover:text-yellow-300 transition font-bold text-2xl">Home</a>
+      <a href="./html/Product.html" class="block hover:text-yellow-300 transition font-bold text-2xl">Product</a>
+      <a href="./html/Detail.html" class="block hover:text-yellow-300 transition font-bold text-2xl">Detail</a>
+      <a href="./html/Cart.html" class="hover:text-yellow-300 transition font-bold text-2xl">Cart</a>
+      <a href="./html/Checkout.html" class="block hover:text-yellow-300 transition font-bold text-2xl">Check Out</a>
+      <a href="./html/Abuot.html" class="block hover:text-yellow-300 transition font-bold text-2xl">Abuot Us</a>
+      <a href="./html/Login.html" class="block bg-white text-indigo-700 text-center px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold mt-2 font-bold text-2xl">
+        Log in
+      </a>
+    </div>
+    <div class="flex flex-col w-full items-center pt-4 gap-4 bg-gradient-to-b from-blue-600 via-blue-300 to-blue-100">
+    <p class="text-4xl md:text-6xl font-extrabold text-white">LOOK AT ME</p>
     <form action="" class="max-w-[480px] w-full px-4">
-      <div class="relative">
-        <input type="text" name="q"
-               class="w-full border h-12 shadow p-4 rounded-full
-                      dark:bg-slate-700 dark:border-slate-600 dark:text-white dark:placeholder-slate-400"
-               placeholder="search">
-        <button type="submit">
-          <svg class="text-gray-400 h-5 w-5 absolute top-3.5 right-3 fill-current dark:text-slate-300"
-               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
-            <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786
-              c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23
-              c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208
-              c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837
-              C56.255,54.982,56.293,53.08,55.146,51.887z
-              M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z"/>
-          </svg>
-        </button>
-      </div>
+        <div class="relative text-blue-400">
+            <input type="text" name="q" class="w-full border h-12 text-blue-400 shadow p-4 rounded-full" placeholder="search">
+            <button type="submit">
+                    <svg class="text-blue-400 h-5 w-5 absolute top-3.5 right-3 fill-current"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                        x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                        xml:space="preserve">
+                        <path
+                            d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                    </svg>
+                </button>
+        </div>
     </form>
-  </div>
-</nav>
+</div>
+    </nav>
     
 
     <main class="dark:bg-slate-900"> 
@@ -1183,46 +1163,50 @@
     </main>
 
     <!-- ════════════════════ FOOTER ════════════════════ -->
-<footer class="w-full py-10 text-white
-bg-gradient-to-t from-green-600 to-indigo-700
-dark:from-slate-900 dark:to-black">
+<footer class="w-full py-10 text-black
+bg-gradient-to-b from-white via-yellow-100 to-yellow-400
+dark:from-slate-900 dark:to-black
+dark:text-white">
 
   <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 
     <!-- Brand -->
     <div>
-      <h1 class="text-3xl font-bold mb-4">Pape Store</h1>
-
-      <p class="text-gray-200 dark:text-gray-400">
-        We provide high-quality fashion products with affordable prices.
-      </p>
+      <h1 class="text-3xl font-bold mb-4">Explore</h1>
+      <ul>
+                    <li><a href="../index.html" class="block hover:text-gray-300">Home</a></li>
+                    <li><a href="./Product.html" class="block hover:text-gray-300">Product</a></li>
+                    <li><a href="./Detail.html" class="block hover:text-gray-300">Detail</a></li>
+                    <li><a href="./Cart.html" class="block hover:text-gray-300">Cart</a></li>
+                    <li><a href="./Checkout.html" class="block hover:text-gray-300">Check Out</a></li>
+                    <li><a href="./Abuot.html" class="block hover:text-gray-300">About Us</a></li>
+      </ul>
     </div>
 
     <!-- Links -->
     <div>
-      <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+      <h2 class="text-xl font-bold mb-4">ADDRESS</h2>
 
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-yellow-300">Home</a></li>
-        <li><a href="#" class="hover:text-yellow-300">Shop</a></li>
-        <li><a href="#" class="hover:text-yellow-300">About</a></li>
-      </ul>
+      <ul>
+                    <li><a href="#" class="block hover:text-gray-300">No. 41, Street 271,Sangkat</a></li>
+                    <li><a href="#" class="block hover:text-gray-300">Boeung Kak I,Khan Toul Kork,</a></li>
+                    <li><a href="#" class="block hover:text-gray-300">Phnom Penh, Cambodia</a></li>
+                </ul>
     </div>
 
     <!-- Contact -->
     <div>
       <h2 class="text-xl font-bold mb-4">Contact</h2>
 
-      <ul class="space-y-2 text-gray-200 dark:text-gray-400">
-        <li>📞 +855 12 345 678</li>
-        <li>📧 papestore@gmail.com</li>
-        <li>📍 Phnom Penh</li>
-      </ul>
+      <ul>
+                    <li><a href="eceaqr@gmail.com" class="block hover:text-gray-300">eceaqr@gmail.com</a></li>
+                    <li><a href="https://t.me/ITchhannon" class="block hover:text-gray-300">Phone:012777771</a></li>
+                </ul>
     </div>
 
     <!-- Newsletter -->
     <div>
-      <h2 class="text-xl font-bold mb-4">Newsletter</h2>
+      <h2 class="text-xl font-bold mb-4">Socall Media</h2>
 
       <div class="flex">
 
@@ -1249,9 +1233,9 @@ dark:from-slate-900 dark:to-black">
 
   <hr class="w-11/12 mx-auto my-6 opacity-30">
 
-  <div class="text-center text-gray-200 dark:text-gray-500">
-    © 2026 Pape Store. All Rights Reserved.
-  </div>
+  <div class="text-center mt-8">
+            <p>&copy;2026 Urban Style Cambodia. Designed with ❤️.</p>
+        </div>
 
 </footer>
 

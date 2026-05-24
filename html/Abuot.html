@@ -7,161 +7,45 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { darkMode: 'class' }</script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <style>
-     body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #c6ab8f;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  padding: 40px;
-}
-
-.cart {
-  width: 800px;
-  background: #eee;
-  border-radius: 20px;
-  padding: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header input {
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-}
-
-.table-header {
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
-  margin: 20px 0;
-  font-weight: bold;
-  color: gray;
-}
-
-.item {
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr auto;
-  align-items: center;
-  background: #fff;
-  padding: 15px;
-  border-radius: 15px;
-  margin-bottom: 15px;
-}
-
-.product {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.img {
-  width: 60px;
-  height: 60px;
-  background: #ddd;
-  border-radius: 10px;
-}
-
-.qty-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.qty-box button {
-  width: 25px;
-  height: 25px;
-  border: none;
-  background: orange;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.delete {
-  background: red;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.order {
-  background: #2d9cdb;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.total {
-  font-size: 18px;
-  font-weight: bold;
-}
-    *, *::before, *::after {
-      transition: background-color .25s, border-color .2s, color .15s, box-shadow .2s;
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            'slide-up': 'slideUp 0.8s ease-out forwards',
+            pulse: 'pulse 2s infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(40px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            }
+          },
+          colors: {
+            art: {
+              cream: '#FFF8F0',
+              coral: '#FF6B6B',
+              gold: '#FFD93D',
+              deep: '#1E1E2F'
+            }
+          }
+        }
+      }
     }
-
-    /* nav-link gradient text helper */
-    .nav-link {
-      background: linear-gradient(to right, #fbcfe8, #e879f9, #67e8f9);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      filter: drop-shadow(0 0 12px rgba(255,105,255,0.8));
-      font-weight: 700;
-      font-size: 1.5rem;
-      transition: transform .3s;
-      display: inline-block;
-    }
-    .nav-link:hover { transform: scale(1.1); }
-
-    /* dark-mode toggle pill */
-    #dark-toggle {
-      display: flex; align-items: center; gap: 6px;
-      background: transparent;
-      border: 2px solid rgba(255,255,255,.4);
-      color: #fff;
-      border-radius: 999px;
-      padding: 4px 14px;
-      cursor: pointer;
-      font-size: .85rem;
-      font-weight: 600;
-    }
-    #dark-toggle:hover { background: rgba(255,255,255,.15); }
-
-    /* sun/moon swap */
-    .icon-moon { display: inline; }
-    .icon-sun  { display: none;   }
-    .dark .icon-moon { display: none;   }
-    .dark .icon-sun  { display: inline; }
-
-    /* product card swipe: hide scrollbar */
-    .scrollbar-hide::-webkit-scrollbar { display: none; }
-    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-
-    /* slide dots transition already handled by Alpine/Tailwind */
+    
+  </script>
   </style>
 </head>
 <body class="bg-gray-100 dark:bg-slate-900 min-h-screen">
+    <div class="fixed inset-0 -z-10 opacity-10">
+    <div class="absolute w-72 h-72 bg-art-coral rounded-full top-1/4 -left-24 animate-float"></div>
+    <div class="absolute w-56 h-56 bg-art-gold rounded-full bottom-1/4 -right-16 animate-float delay-200"></div>
+  </div>
      <!-- ════════════════════ NAVBAR ════════════════════ -->
     <nav class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -228,164 +112,150 @@
 </div>
     </nav>
 
-  <main>
-    <div class="container">
-  <div class="cart">
+      <!-- Hero Section -->
+  <section class="min-h-screen pt-24 pb-16 px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto">
+    <div class="lg:w-1/2 animate-slide-up">
+      <h1 class="text-5xl md:text-6xl font-bold font-serif leading-tight mb-6">
+        <span class="block">Ignite Your</span>
+        <span class="block text-art-coral">Artistic Soul</span>
+      </h1>
+      <p class="text-lg text-gray-700 mb-8 max-w-lg">
+        Explore a curated selection of contemporary and classic artwork, connecting collectors and creators in an inspiring online space.
+      </p>
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <button class="px-8 py-4 bg-art-coral text-white rounded-lg hover:bg-red-500 transition hover:-translate-y-1">
+          Browse Gallery
+        </button>
+        <button class="px-8 py-4 border border-gray-300 text-art-deep rounded-lg hover:bg-white transition">
+          Meet Artists
+        </button>
+      </div>
 
-    <div class="header">
-      <h2>Shopping Cart</h2>
-      <input type="text" placeholder="Search Product...">
+      <div class="mt-12 flex space-x-8">
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-art-coral">150+</span>
+          <span class="text-gray-600">Artworks</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-art-coral">30</span>
+          <span class="text-gray-600">Exhibitions</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-art-coral">24/7</span>
+          <span class="text-gray-600">Online Viewing</span>
+        </div>
+      </div>
     </div>
 
-    <div class="table-header">
-      <span>Match clothes</span>
-      <span>Number</span>
-      <span>Price</span>
-      <span>Amount</span>
+    <!-- Hero Image -->
+    <div class="lg:w-1/2 relative animate-slide-up delay-200">
+      <div class="relative rounded-2xl overflow-hidden shadow-xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b" alt="Abstract Art" class="w-full object-cover"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+      </div>
+
+      <!-- Floating Tags -->
+      <div class="absolute -top-6 -left-6 bg-white p-4 rounded-lg shadow w-40 animate-slide-up delay-300">
+        <h4 class="font-bold text-art-deep">Original Work</h4>
+        <p class="text-sm text-gray-600">Signed by Artist</p>
+      </div>
+      <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow w-40 animate-slide-up delay-400">
+        <h4 class="font-bold text-art-deep">Limited Editions</h4>
+        <p class="text-sm text-gray-600">Only 50 Prints</p>
+      </div>
+      <div class="absolute top-8 right-8 bg-art-gold text-art-deep px-4 py-2 rounded-full animate-pulse">
+        <span class="font-bold">$499</span>
+      </div>
     </div>
-
-    <div class="cart-body" id="cart-body">
-
-      <!-- Item 1-->
-      <div class="item">
-        <div class="product">
-          <div class="img"style="background: #ddd;"><img src="https://i.pinimg.com/736x/1a/55/26/1a5526245b615aad2c673b719040123f.jpg" alt=""></div>
-          <div>
-            <h4>Urban Wave</h4>
-          </div>
-        </div>
-
-        <div class="qty-box">
-          <button class="minus">-</button>
-          <span class="qty">2</span>
-          <button class="plus">+</button>
-        </div>
-
-        <div class="price">$50.00</div>
-        <div class="amount">$10.00</div>
-
-        <button class="delete">✖</button>
+  </section>
+<section class="min-h-screen pt-24 pb-12 px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto">
+    <div class="lg:w-1/2 mb-16 lg:mb-0 lg:pr-12 animate-slide-up">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-6">
+        <span class="block">Live With</span>
+        <span class="block text-art-plum">Creative Soul</span>
+      </h1>
+      <p class="text-lg text-gray-700 mb-8 max-w-lg">
+        ArtistryHaus curates a collection of evocative art pieces, decor, and furniture that transform your home into a personal gallery.
+      </p>
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <button class="px-8 py-4 bg-art-plum text-white rounded-lg hover:bg-art-plum/90 transition-all duration-300 transform hover:-translate-y-1">
+          Shop Artworks
+        </button>
+        <button class="px-8 py-4 border border-gray-300 text-gray-700 rounded-lg hover:bg-white transition-all duration-300">
+          Browse Styles
+        </button>
       </div>
-
-      <!-- Item 2-->
-      <div class="item">
-        <div class="product">
-          <div class="img"style="background: #ddd;"><img src="https://i.pinimg.com/736x/40/a0/72/40a0720876ed5bb3014ff9ccc64f2c8f.jpg" alt=""></div>
-          <div>
-            <h4>Nova Style</h4>
-          </div>
+      <div class="mt-12 flex items-center space-x-8">
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-art-plum">30+</span>
+          <span class="text-gray-700">Featured Artists</span>
         </div>
-
-        <div class="qty-box">
-          <button class="minus">-</button>
-          <span class="qty">2</span>
-          <button class="plus">+</button>
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-art-plum">200+</span>
+          <span class="text-gray-700">Curated Pieces</span>
         </div>
-
-        <div class="price">$40.00</div>
-        <div class="amount">$80.00</div>
-
-        <button class="delete">✖</button>
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-art-plum">Global</span>
+          <span class="text-gray-700">Artist Network</span>
+        </div>
       </div>
-       <!-- Item 3-->
-      <div class="item">
-        <div class="product">
-          <div class="img"style="background: #ddd;"><img src="https://i.pinimg.com/736x/c7/b6/27/c7b627f3221d3070c75c7a9a005a400f.jpg" alt=""></div>
-          <div>
-            <h4>Black Avenue</h4>
-          </div>
-        </div>
-
-        <div class="qty-box">
-          <button class="minus">-</button>
-          <span class="qty">2</span>
-          <button class="plus">+</button>
-        </div>
-
-        <div class="price">$50.00</div>
-        <div class="amount">$100.00</div>
-
-        <button class="delete">✖</button>
-      </div>
-
-       <!-- Item 4-->
-      <div class="item">
-        <div class="product">
-          <div class="img"style="background: #ddd;"><img src="https://i.pinimg.com/1200x/09/ac/30/09ac305cd3b04e69b13c038d489ea7f7.jpg" alt=""></div>
-          <div>
-            <h4>MoonWear</h4>
-          </div>
-        </div>
-
-        <div class="qty-box">
-          <button class="minus">-</button>
-          <span class="qty">1</span>
-          <button class="plus">+</button>
-        </div>
-
-        <div class="price">$50.00</div>
-        <div class="amount">$50.00</div>
-
-        <button class="delete">✖</button>
-      </div>
-
-
     </div>
-
-    <div class="footer">
-      <div class="total">
-        Total: $<span id="total">0</span>
+    <div class="lg:w-1/2 relative animate-slide-up delay-200">
+      <div class="relative rounded-2xl overflow-hidden shadow-xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+        <img class="w-full h-auto object-cover" src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae" alt="Modern artwork display">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
       </div>
-      <button class="order">Order Now →</button>
+      <div class="absolute -top-6 -left-6 bg-white p-4 rounded-lg shadow-md w-40 animate-slide-up delay-300">
+        <h4 class="font-bold text-art-ink">Original</h4>
+        <p class="text-sm text-gray-600">One-of-a-kind pieces</p>
+      </div>
+      <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-md w-40 animate-slide-up delay-400">
+        <h4 class="font-bold text-art-ink">Expressive</h4>
+        <p class="text-sm text-gray-600">Curated for emotion</p>
+      </div>
     </div>
+  </section>
 
+  <!-- Featured Artists Section -->
+  <section class="py-20 px-6 md:px-12 bg-art-blush text-art-ink">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-serif font-bold mb-4">Featured Artists</h2>
+      <p class="text-lg text-art-ink/80">Celebrating global talent through inspiring creations</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Artist portrait" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Elena Mirov</h3>
+          <p class="text-sm text-gray-600">Known for her abstract watercolor dreamscapes, Elena’s work evokes deep introspection.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Artist portrait" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Raj Patel</h3>
+          <p class="text-sm text-gray-600">Raj blends digital minimalism with traditional Indian motifs to create visual harmony.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Artist portrait" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Ava Thompson</h3>
+          <p class="text-sm text-gray-600">With roots in street art, Ava’s canvas works vibrate with energy, identity, and narrative.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Press Mentions -->
+  <div class="py-12 px-6 md:px-12 max-w-7xl mx-auto">
+    <p class="text-center text-gray-500 mb-8">As Seen In</p>
+    <div class="flex flex-wrap justify-center gap-10 text-xl font-serif italic text-art-deep">
+      <div>ArtForum</div>
+      <div>Creative Boom</div>
+      <div>Design Milk</div>
+      <div>Juxtapoz</div>
+    </div>
   </div>
-</div>
-
-<script>
-  function updateCart() {
-  let total = 0;
-
-  document.querySelectorAll(".item").forEach(item => {
-    let price = parseFloat(item.querySelector(".price").textContent.replace("$",""));
-    let qty = parseInt(item.querySelector(".qty").textContent);
-
-    let amount = price * qty;
-    item.querySelector(".amount").textContent = "$" + amount.toFixed(2);
-
-    total += amount;
-  });
-
-  document.getElementById("total").textContent = total.toFixed(2);
-}
-
-// Quantity buttons
-document.addEventListener("click", function(e) {
-
-  if (e.target.classList.contains("plus")) {
-    let qtyEl = e.target.parentElement.querySelector(".qty");
-    qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
-  }
-
-  if (e.target.classList.contains("minus")) {
-    let qtyEl = e.target.parentElement.querySelector(".qty");
-    let qty = parseInt(qtyEl.textContent);
-    if (qty > 1) qtyEl.textContent = qty - 1;
-  }
-
-  if (e.target.classList.contains("delete")) {
-    e.target.parentElement.remove();
-  }
-
-  updateCart();
-});
-
-// Initial total
-updateCart();
-</script>
-  </main>
-  
-
         <!-- ════════════════════ FOOTER ════════════════════ -->
 <footer class="w-full py-10 text-black
 bg-gradient-to-b from-white via-yellow-100 to-yellow-400
